@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035D6CE69473E052122E1551 /* Pods_resteye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB244EF44CB26984D8638915 /* Pods_resteye.framework */; };
 		03E4FEE028E408FD00993A5E /* resteyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E4FEDF28E408FD00993A5E /* resteyeApp.swift */; };
 		03E4FEE228E408FD00993A5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E4FEE128E408FD00993A5E /* ContentView.swift */; };
 		03E4FEE428E408FF00993A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E4FEE328E408FF00993A5E /* Assets.xcassets */; };
@@ -14,11 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0310DAFA28E67B4700363515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		03E4FEDC28E408FD00993A5E /* resteye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resteye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E4FEDF28E408FD00993A5E /* resteyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resteyeApp.swift; sourceTree = "<group>"; };
 		03E4FEE128E408FD00993A5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03E4FEE328E408FF00993A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E4FEE628E408FF00993A5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C77959C277CA3E9E3096B0D8 /* Pods-resteye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-resteye.debug.xcconfig"; path = "Target Support Files/Pods-resteye/Pods-resteye.debug.xcconfig"; sourceTree = "<group>"; };
+		DB244EF44CB26984D8638915 /* Pods_resteye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_resteye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27DE23FE7CF24FC00B25B83 /* Pods-resteye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-resteye.release.xcconfig"; path = "Target Support Files/Pods-resteye/Pods-resteye.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035D6CE69473E052122E1551 /* Pods_resteye.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +43,8 @@
 			children = (
 				03E4FEDE28E408FD00993A5E /* resteye */,
 				03E4FEDD28E408FD00993A5E /* Products */,
+				20CBD189BCE17806CF84117F /* Pods */,
+				75536A5C9972E1E7C17880C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +59,7 @@
 		03E4FEDE28E408FD00993A5E /* resteye */ = {
 			isa = PBXGroup;
 			children = (
+				0310DAFA28E67B4700363515 /* Info.plist */,
 				03E4FEDF28E408FD00993A5E /* resteyeApp.swift */,
 				03E4FEE128E408FD00993A5E /* ContentView.swift */,
 				03E4FEE328E408FF00993A5E /* Assets.xcassets */,
@@ -67,6 +76,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		20CBD189BCE17806CF84117F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C77959C277CA3E9E3096B0D8 /* Pods-resteye.debug.xcconfig */,
+				E27DE23FE7CF24FC00B25B83 /* Pods-resteye.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75536A5C9972E1E7C17880C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB244EF44CB26984D8638915 /* Pods_resteye.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03E4FEEA28E408FF00993A5E /* Build configuration list for PBXNativeTarget "resteye" */;
 			buildPhases = (
+				48C68B1E4803FA0C69D6C4F5 /* [CP] Check Pods Manifest.lock */,
 				03E4FED828E408FD00993A5E /* Sources */,
 				03E4FED928E408FD00993A5E /* Frameworks */,
 				03E4FEDA28E408FD00993A5E /* Resources */,
+				B75993EE0D2EB2A28DDFC2EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48C68B1E4803FA0C69D6C4F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-resteye-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B75993EE0D2EB2A28DDFC2EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-resteye/Pods-resteye-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-resteye/Pods-resteye-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-resteye/Pods-resteye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03E4FED828E408FD00993A5E /* Sources */ = {
@@ -261,6 +331,7 @@
 		};
 		03E4FEEB28E408FF00993A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C77959C277CA3E9E3096B0D8 /* Pods-resteye.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,6 +341,7 @@
 				DEVELOPMENT_TEAM = F2XL33YQX4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = resteye/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +362,7 @@
 		};
 		03E4FEEC28E408FF00993A5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E27DE23FE7CF24FC00B25B83 /* Pods-resteye.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +372,7 @@
 				DEVELOPMENT_TEAM = F2XL33YQX4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = resteye/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
