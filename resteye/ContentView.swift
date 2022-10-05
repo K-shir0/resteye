@@ -11,7 +11,13 @@ import UIPiPView
 
 struct ContentView: View {
     var body: some View {
-        SampleViewControllerWrapper()
+        VStack {
+            Text("Resteye")
+            SampleViewControllerWrapper().frame(maxHeight: 80)
+            Button("使い方(?)") {
+                
+            }
+        }
     }
 }
 
@@ -42,23 +48,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        //        view.backgroundColor = .black
         let width = CGFloat(240)
         
-        /// Start Button
         let margin = ((self.view.bounds.width - width) / 2)
-        startButton.frame = .init(x: margin, y: 80, width: width, height: 40)
-        startButton.addTarget(self, action: #selector(ViewController.toggle), for: .touchUpInside)
-        startButton.setTitle("Toggle PiP", for: .normal)
-        startButton.setTitleColor(.black, for: .normal)
-        startButton.backgroundColor = .white
-        startButton.layer.cornerRadius = 10
-        self.view.addSubview(startButton)
-        
-        /// PiP View
-        pipView.frame = .init(x: margin, y: 160, width: width, height: 40)
-        pipView.backgroundColor = .black
+        pipView.frame = .init(x: margin, y: 0, width: width, height: 100)
+        pipView.backgroundColor = .red
         self.view.addSubview(pipView)
+        
+        /// Start Button
+        startButton.frame = .init(x: margin, y: 40, width: width, height: 40)
+        startButton.addTarget(self, action: #selector(ViewController.toggle), for: .touchUpInside)
+        startButton.setTitle("Resteyeをはじめる", for: .normal)
+        startButton.setTitleColor(.systemBlue, for: .normal)
+        //        startButton.backgroundColor = .white
+        //        startButton.layer.cornerRadius = 10
+        self.view.addSubview(startButton)
         
         /// Time Label on PiPView
         timeLabel.frame = .init(x: 10, y: 0, width: width - 20, height: 40)
@@ -70,12 +75,22 @@ class ViewController: UIViewController {
             timeLabel.adjustsFontSizeToFitWidth = true
         }
         
+        let calendar = Calendar.current
+        
         /// Time Label  shows now.
-        formatter.dateFormat = "y-MM-dd H:mm:ss.SSSS"
+        //        formatter.dateFormat = "y-MM-dd H:mm:ss.SSSS"
         timer = Timer(timeInterval: (0.1 / 60.0), repeats: true) { [weak self] _ in
             guard let self = self else { return }
-            //            self.timeLabel.text = self.formatter.string(from: Date())
-            self.timeLabel.text = "これはテスト"
+            //                        self.timeLabel.text = self.formatter.string(from: Date())
+            
+            let second = calendar.component(.second, from: Date())
+            
+            /// 6秒に一回
+            if (second % 3 == 0) {
+                self.timeLabel.text = "まばたき"
+            } else {
+                self.timeLabel.text = ""
+            }
         }
         RunLoop.main.add(timer, forMode: .default)
     }
@@ -83,8 +98,12 @@ class ViewController: UIViewController {
     @objc func toggle() {
         if (!pipView.isPictureInPictureActive()) {
             pipView.startPictureInPicture(withRefreshInterval: (0.1 / 60.0))
+            
+            startButton.setTitle("Resteyeを停止", for: .normal)
         } else {
             pipView.stopPictureInPicture()
+            
+            startButton.setTitle("Resteyeをはじめる", for: .normal)
         }
     }
     
